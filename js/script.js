@@ -23,11 +23,13 @@ function actualizaContador() {
 setInterval(actualizaContador, 1000);
 actualizaContador(); // Llamada inicial
 
-  // window.addEventListener('load', () => {
-  //   const audio = document.getElementById('miAudio');
-  //   audio.play().catch(e => {
-  //     console.warn('Reproducción automática bloqueada. Intentando silenciar...');
-  //     audio.muted = true;
-  //     audio.play();
-  //   });
-  // });
+  window.addEventListener('load', () => {
+    document.getElementById('popup').style.display = 'none';
+  });
+  function abrirPopup() {
+    document.getElementById('popup').style.display = 'flex';
+  }
+
+  function cerrarPopup() {
+    document.getElementById('popup').style.display = 'none';
+  }
