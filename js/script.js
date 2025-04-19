@@ -22,3 +22,12 @@ function actualizaContador() {
 
 setInterval(actualizaContador, 1000);
 actualizaContador(); // Llamada inicial
+
+  // window.addEventListener('load', () => {
+  //   const audio = document.getElementById('miAudio');
+  //   audio.play().catch(e => {
+  //     console.warn('Reproducción automática bloqueada. Intentando silenciar...');
+  //     audio.muted = true;
+  //     audio.play();
+  //   });
+  // });
