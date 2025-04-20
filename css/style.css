@@ -44,7 +44,7 @@
     /* --text-color-general:#01777e; */
     /* --text-color-general:#80BFFF; */
     --text-color-general:#134475;
-    
+    --resplandor-claro:#f3fcc3;
     
     --main-bg-color-white:#fff;
     --text-color-fondo-oscuro:#fff;
@@ -120,7 +120,13 @@ body{
 }
 .font-Silenter{
     font-family: "Silenter", sans-serif;
-    text-transform:capitalize; 
+    text-transform:none; 
+}
+.teEspero{
+  font-family: "Silenter", sans-serif;
+  font-size: 3em;
+  text-transform:none; 
+  font-weight: normal;
 }
 .divider1{
     border-top: 2px solid #ffffff76;
@@ -145,8 +151,10 @@ body{
     color: var(--text-color-general);
 }
 .icon-regalo, .codigoVestimenta {
-    width: 35px;
-    height: auto;
+    /* width: 35px;
+    height: auto; */
+    height: 3em;
+    width: auto;
 }
 .icon-regalo .fil0, .codigoVestimenta .fil0{
     fill: var(--text-color-general);
@@ -157,7 +165,7 @@ body{
 }
 .btn-cancion{
     padding: 0.5em;
-    color: #fff;
+    color: #ffffff!important;
     background-color: var(--text-color-general);
     border-color: var(--text-color-general);
     border-radius: 3em;
@@ -385,11 +393,11 @@ p{
   }
 
   audio {
-    width: 70%;
+    /* width: 30%; */
     outline: none;
     border-radius: 10px;
-    position: absolute;
-    left:15%;
+    /* position: absolute; */
+    /* left:30%; */
   }
 
   /* Estilo visual para los controles del audio (solo navegadores WebKit como Chrome/Safari) */
@@ -412,23 +420,38 @@ p{
   }
 
 .img-luna{
-    filter: drop-shadow(0 0 5px var(--text-color-general))
-    drop-shadow(0 0 15px var(--text-color-general))
-    drop-shadow(0 0 25px var(--text-color-general));
+    filter: drop-shadow(0 0 5px #eaff70)
+    drop-shadow(0 0 15px #eaff70)
+    drop-shadow(0 0 25px #eaff70);
 }
 .efecto-resplandor{
-    filter: drop-shadow(0 0 5px var(--text-color-general))
-    drop-shadow(0 0 15px var(--text-color-general))
-    drop-shadow(0 0 25px var(--text-color-general));
-    animation: pulso 2s infinite;
+    filter: drop-shadow(0 0 5px var(--resplandor-claro))
+    drop-shadow(0 0 15px var(--resplandor-claro))
+    drop-shadow(0 0 25px var(--resplandor-claro));
+    animation: pulsoClaro 5s infinite;
+}
+@keyframes pulsoOscuro {
+  0%, 100% {
+    filter: drop-shadow(0 0 5px var(--text-color-general));
+  }
+  50% {
+    filter: drop-shadow(0 0 20px var(--text-color-general));
+  }
 }
 
-@keyframes pulso {
+.efecto-resplandor-quinceañera{
+  filter: drop-shadow(0 0 5px var(--text-color-general))
+  drop-shadow(0 0 15px var(--text-color-general))
+  drop-shadow(0 0 25px var(--text-color-general));
+  animation: pulsoOscuro 2s infinite;
+}
+
+@keyframes pulsoClaro {
     0%, 100% {
-      filter: drop-shadow(0 0 5px var(--text-color-general));
+      filter: drop-shadow(0 0 5px var(--resplandor-claro));
     }
     50% {
-      filter: drop-shadow(0 0 20px var(--text-color-general));
+      filter: drop-shadow(0 0 20px var(--resplandor-claro));
     }
   }
   
@@ -529,14 +552,17 @@ p{
 }
 
 /* ---------------------- CUANDO ES MOVIL ---------------------- */
-
-@media (min-height< 681px) {
-    body{
+@media screen and (max-width: 480px) { 
+    /* body{
         background-color: var(--main-bg-color);
         text-align: center;
-        /* margin-top: 10%;
-        margin-bottom: 10%;
-        padding:10%; */
-    }
+    } */
+    /* audio {
+      width: 80%;
+      outline: none;
+      border-radius: 10px;
+      position: absolute;
+      left:15%;
+    } */
 }
 
