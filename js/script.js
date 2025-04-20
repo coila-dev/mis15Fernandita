@@ -26,6 +26,12 @@ actualizaContador(); // Llamada inicial
   window.addEventListener('load', () => {
     document.getElementById('popup').style.display = 'none';
   });
+  document.body.addEventListener('click', () => {
+    const audio = document.querySelector("miAudio");
+    audio.volume = 1;
+    audio.play();
+
+  });
   function abrirPopup() {
     document.getElementById('popup').style.display = 'flex';
   }
