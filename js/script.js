@@ -24,7 +24,7 @@ setInterval(actualizaContador, 1000);
 actualizaContador(); // Llamada inicial
 
   window.addEventListener('load', () => {
-    document.getElementById('popup').style.display = 'none';
+    // document.getElementById('popup').style.display = 'none';
   });
   document.body.addEventListener('click', () => {
     const audio = document.querySelector("miAudio");
